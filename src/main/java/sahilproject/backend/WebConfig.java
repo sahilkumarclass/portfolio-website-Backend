@@ -9,10 +9,11 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000", "https://portfolio-website-24rb.vercel.app/") // Allow requests from this origin
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow these methods
-                .allowedHeaders("*"); // Allow all headers
+        registry.addMapping("/api/v1/portfolio/**") // adjust path to your endpoint
+                .allowedOrigins("http://localhost:3000", "https://portfolio-website-git-main-sahil-kumars-projects-e8fdf4c2.vercel.app/")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
 
