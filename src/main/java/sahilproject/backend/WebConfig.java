@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/v1/portfolio/**")
-                .allowedOrigins("http://localhost:3000") // Update with your frontend URL
+                .allowedOrigins("http://localhost:3000", "https://portfolio-website-git-main-sahil-kumars-projects-e8fdf4c2.vercel.app/")
                 .allowedMethods("POST", "GET", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
